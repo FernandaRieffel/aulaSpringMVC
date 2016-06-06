@@ -23,6 +23,7 @@
 
 <table border="1">
 	<tr>
+		<th>Código</th>
 		<th>Nome</th>
 		<th>Endereço</th>
 		<th>Bairro</th>
@@ -30,6 +31,7 @@
 	</tr>
 <c:forEach items="${clientes}" var="c">	
 	<tr>
+		<th>${c.codigo}</th>
 		<td>${c.nome}</td>
 		<td>${c.endereco}</td>
 		<td>${c.bairro}</td>

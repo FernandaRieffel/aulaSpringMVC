@@ -22,13 +22,13 @@ public class ClienteController {
 		boolean retorno = new ClienteDao().adicionar(cliente);
 		
 		if(retorno) {
-			return "cliente";
+			return "forward:listar-clientes.html";
 		} else {			
 			return "erro";
 		}
 	}
 	
-	@RequestMapping("lista-clientes")
+	@RequestMapping("listar-clientes.html")
 	public ModelAndView lista() {
 		ModelAndView mv = new ModelAndView("cliente");
 		mv.addObject("clientes", new ClienteDao().listaClientes());
